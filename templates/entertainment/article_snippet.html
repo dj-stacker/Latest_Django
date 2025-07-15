@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body {
+      margin: 0;
+      padding: 1rem;
+      font-family: sans-serif;
+      background-color: white;
+      color: #222;
+    }
+
+    h5 {
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+      display: block;
+    }
+
+    iframe, script, style {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h5>{{ article.title }}</h5>
+  <div>
+    {{ article.content|striptags|truncatewords:10|safe|cut:"&nbsp;" }}
+  </div>
+</body>
+</html>
+

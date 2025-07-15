@@ -1,0 +1,14 @@
+{% extends 'entertainment/base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-10">
+    <h2>{{ article.title }}</h2>
+    <p><small>By {{ article.author.username }} on {{ article.created|date:"M d, Y" }}</small></p>
+    {% if article.image %}
+      <img src="{{ article.image.url }}" class="img-fluid mb-3" alt="{{ article.title }}">
+    {% endif %}
+    <p>{{ article.content|safe }}</p>
+    <a href="{% url 'home' %}" class="btn btn-secondary mt-3">← Back to Home</a>
+  </div>
+</div>
+{% endblock %}
