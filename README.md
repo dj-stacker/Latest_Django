@@ -1,4 +1,4 @@
-##############################################################################
+# Go to site_builder_share.sh for actual latest version ############################################
 # LiveShowSite: Full-featured Django membership blog site with:
 # - Allauth authentication
 # - Bootstrap styling
